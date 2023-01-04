@@ -1,0 +1,58 @@
+.owl-item.active .big-gallery-img {
+    animation: bigGalleryImgZoom 10s ease;
+}
+
+@keyframes bigGalleryImgZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .hero {
+        height: 50vh !important;
+    }
+
+    .small-gallery {
+        width: 100% !important;
+    }
+
+    .clip-path-bg {
+        clip-path: polygon(115% 0%, 100% 0, 100% 100%, 40% 100%) !important;
+        -ms-clip-path: polygon(115% 0%, 100% 0, 100% 100%, 40% 100%) !important;
+        -webkit-clip-path: polygon(115% 0%, 100% 0, 100% 100%, 40% 100%) !important;
+        -moz-clip-path: polygon(115% 0%, 100% 0, 100% 100%, 40% 100%) !important;
+    }
+
+    .clip-path-img {
+        clip-path: polygon(117% 0%, 100% 0, 100% 100%, 42% 100%) !important;
+        -ms-clip-path: polygon(117% 0%, 100% 0, 100% 100%, 42% 100%) !important;
+        -webkit-clip-path: polygon(117% 0%, 100% 0, 100% 100%, 42% 100%) !important;
+        -moz-clip-path: polygon(117% 0%, 100% 0, 100% 100%, 42% 100%) !important;
+    }
+}
+
+/* start of text columns */
+@media only screen and (max-width:991px) {
+    .text-columns-big-title {
+        top: 40px !important;
+        transform: translate(-60%, -70px) !important;
+    }
+}
+
+/* end of text columns */
+
+/* start of icons */
+.border-hover {
+    transition: all .25s ease-in-out;
+}
+
+.border-hover:hover {
+    background: var(--accent-primary);
+}
+
+/* end of icons */
