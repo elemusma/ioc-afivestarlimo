@@ -30,6 +30,8 @@ a.btn-outline {
     padding: 10px 35px !important;
     display: inline-block;
     transition: all .25s ease-in-out;
+    border-color: var(--accent-quinary);
+    color: var(--accent-quinary);
 }
 
 .btn-outline a:hover,

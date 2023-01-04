@@ -177,7 +177,7 @@ echo '<div class="pt-5 pb-5 text-white text-lg-center position-relative" style="
 echo '<div class="container">';
 echo '<div class="row">';
 echo '<div class="col-lg-12 col-6">';
-echo '<h1 class="pt-3 pb-3 mb-0 text-shadow" style="font-size:10vw;">' . get_the_title() . '</h1>';
+echo '<h1 class="pt-3 pb-3 mb-0 text-shadow" style="font-size:5vw;">' . get_the_title() . '</h1>';
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 the_content();
