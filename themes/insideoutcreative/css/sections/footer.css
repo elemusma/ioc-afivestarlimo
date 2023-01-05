@@ -1,3 +1,10 @@
 footer ul.menu>li>a {
     font-weight: 200;
+    color: var(--accent-quinary);
+}
+
+footer .gform_footer.top_label {
+    border: none;
+    padding-top: 25px !important;
+    /* margin-top: 15px; */
 }

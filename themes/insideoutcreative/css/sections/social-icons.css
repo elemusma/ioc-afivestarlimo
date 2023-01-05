@@ -1,11 +1,11 @@
 .si svg {
     height: 15px;
     width: auto;
-    fill: var(--accent-primary);
+    fill: var(--accent-quinary);
 }
 
 .svg-icon {
-    border: 1px solid var(--accent-primary);
+    border: 1px solid var(--accent-quinary);
     height: 40px;
     width: 40px;
     display: flex;
@@ -21,8 +21,8 @@
 }
 
 a:hover .svg-icon {
-    background: var(--accent-primary);
-    border-color: var(--accent-primary);
+    background: var(--accent-quinary);
+    border-color: var(--accent-quinary);
 }
 
 a:hover .svg-icon path {

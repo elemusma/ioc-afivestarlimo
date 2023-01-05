@@ -93,6 +93,6 @@ $('.testimonial-carousel').owlCarousel({
     autoplayHoverPause: false,
     // animateOut: 'slideOutRight',
     // animateIn: 'slideInLeft',
-    navText: ["<img src='https://insideoutcreative.io/wp-content/uploads/2022/12/Arrow-Circle-Left.png' />", "<img src='https://insideoutcreative.io/wp-content/uploads/2022/12/Arrow-Circle-Right.png' />"],
+    navText: ["<img src='https://insideoutcreative.io/wp-content/uploads/2023/01/Arrow-with-Circle-Black-Left.png' />", "<img src='https://insideoutcreative.io/wp-content/uploads/2023/01/Arrow-with-Circle-Black-Right.png' />"],
     items: 1,
 });

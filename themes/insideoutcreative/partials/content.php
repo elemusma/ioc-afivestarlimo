@@ -134,7 +134,7 @@ if($layout == 'Content + Image'){
     endwhile; endif;
 } if($layout == 'Content'){
     if(have_rows('content')): while(have_rows('content')): the_row();
-    echo '<section class="position-relative text-white bg-accent" style="padding:100px 0;">';
+    echo '<section class="position-relative text-white bg-accent-quaternary" style="padding:100px 0;">';
     echo '<div class="container-fluid">';
     echo '<div class="row justify-content-center">';
 
@@ -174,8 +174,8 @@ if($layout == 'Content + Image'){
             while(have_rows('icons_inner')): the_row();
             $icon = get_sub_field('icon');
             echo '<div class="col-lg-4 col-6 text-center mb-5">';
-            echo '<div class="border-hover d-flex align-items-center justify-content-center ml-auto mr-auto mb-4" style="border-radius:50%;height:75px;width:75px;border:1px solid var(--accent-primary);">';
-            echo wp_get_attachment_image($icon['id'],'full','',['class'=>'w-100','style'=>'height:40px;object-fit:contain;']);
+            echo '<div class="border-hover d-flex align-items-center justify-content-center ml-auto mr-auto mb-4" style="border-radius:50%;height:75px;width:75px;border:1px solid var(--accent-quinary);">';
+            echo wp_get_attachment_image($icon['id'],'full','',['class'=>'','style'=>'height:40px;width:40px;object-fit:contain;']);
             echo '</div>';
                 
                 echo '<h3 class="h6 light">' . get_sub_field('title') . '</h3>';
@@ -226,14 +226,14 @@ if($layout == 'Content + Image'){
     endwhile; endif;
 } if($layout == 'Testimonials'){
     if(have_rows('testimonials')): while(have_rows('testimonials')): the_row();
-    echo '<section class="position-relative" style="padding:150px 0;">';
+    echo '<section class="position-relative bg-accent-quinary" style="padding:150px 0;">';
 
-    echo wp_get_attachment_image(177,'full','',['class'=>'position-absolute h-100 z-1','style'=>'top:0;left:50%;transform:translate(-50%,-50%);width:150px;object-fit:contain;']);
-    echo wp_get_attachment_image(173,'full','',['class'=>'w-100 h-100 position-absolute','style'=>'top:0;left:0;']);
-
+    echo wp_get_attachment_image(173,'full','',['class'=>'w-100 position-absolute','style'=>'height:80%;top:10%;left:0;mix-blend-mode:multiply;']);
+    
     echo '<div class="container">';
     echo '<div class="row">';
     echo '<div class="col-12 text-center pb-5">';
+    echo wp_get_attachment_image(218,'full','',['class'=>'h-100 z-1 img-quote','style'=>'object-fit:contain;']);
 
     echo get_sub_field('content');
 
@@ -247,7 +247,7 @@ if($layout == 'Content + Image'){
 
 
                 echo '<div class="text-center col-lg-6 ml-auto mr-auto">';
-                echo '<div class="pb-4 text-accent" style="font-size:125%;">';
+                echo '<div class="pb-4 text-white" style="font-size:125%;">';
                 echo get_sub_field('content');
                 echo '</div>';
 
@@ -255,7 +255,7 @@ if($layout == 'Content + Image'){
                 echo wp_get_attachment_image($headshot['id'],'full','',['class'=>'ml-auto mr-auto','style'=>'width:100px;height:100px;object-fit:cover;border-radius:50%;']);
 
                 echo '<span class="d-block h5 cormorant pt-4">' . get_sub_field('name') . '</span>';
-                echo '<span class="d-block text-accent">' . get_sub_field('title') . '</span>';
+                echo '<span class="d-block text-white">' . get_sub_field('title') . '</span>';
                 
                 echo '</div>';
 
@@ -269,16 +269,16 @@ if($layout == 'Content + Image'){
     endwhile; endif;
 } if($layout == 'Contact'){
     if(have_rows('contact')): while(have_rows('contact')): the_row();
-        echo '<section class="position-relative" style="padding-top:150px;">';
+        echo '<section class="position-relative bg-accent-quinary" style="padding-top:500px;padding-bottom:100px;">';
 
         $bgImg = get_sub_field('background_image');
-        echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'position-absolute w-100 h-75','style'=>'top:0;left:0;object-fit:cover;']);
+        echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'position-absolute w-100','style'=>'height:80%;top:0;left:0;object-fit:cover;']);
 
         echo '<div class="container">';
         echo '<div class="row justify-content-center">';
         echo '<div class="col-lg-9 text-center">';
-        echo '<div class="position-relative p-5">';
-        echo wp_get_attachment_image(173,'full','',['class'=>'position-absolute w-100 h-100','style'=>'top:0;left:0;object-fit:cover;']);
+        echo '<div class="position-relative p-5" style="">';
+        echo wp_get_attachment_image(173,'full','',['class'=>'position-absolute w-100 h-100','style'=>'top:0;left:0;opacity:.71;object-fit:cover;']);
 
         echo '<div class="position-relative">';
         echo get_sub_field('content');

@@ -23,7 +23,7 @@ if(get_field('body','options')) { the_field('body','options'); }
 // echo '<div class="blank-space"></div>';
 echo '<header class="position-fixed pt-3 pb-3 w-100" style="top:0;left:0;transition:all .25s ease-in-out;z-index:6;">';
 
-echo '<div class="position-absolute w-100 bg-accent header-background" style="top:0;left:0;transition:all .5s ease-in-out;"></div>';
+echo '<div class="position-absolute w-100 bg-accent-quinary header-background" style="top:0;left:0;transition:all .5s ease-in-out;"></div>';
 
 echo '<div class="nav">';
 echo '<div class="container">';
@@ -150,7 +150,7 @@ if( $smallGallery ):
     echo '<div class="position-absolute h-100 small-gallery owl-carousel owl-theme overflow-h" style="top:0;right:0;z-index:4;width:35%;background-repeat:no-repeat;background-size:contain;">';
     foreach( $smallGallery as $image ):
         echo '<div class="h-100">';
-        echo '<div class="position-absolute h-100 bg-accent clip-path-bg" style="top:0;right:0;width:100%;
+        echo '<div class="position-absolute h-100 bg-accent-quinary clip-path-bg" style="top:0;right:0;width:100%;
         clip-path: polygon(75% 0%, 100% 0, 100% 100%, 0% 100%);
         -ms-clip-path: polygon(75% 0%, 100% 0, 100% 100%, 0% 100%);
         -webkit-clip-path: polygon(75% 0%, 100% 0, 100% 100%, 0% 100%);

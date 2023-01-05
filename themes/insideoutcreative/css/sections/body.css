@@ -6,6 +6,8 @@
   --accent-quinary: #a49c86;
   --accent-senary: #c9c5ba;
   --accent-septenary: #dcd0b2;
+  --accent-octonary: #a39b86;
+  --accent-nonary: #c9c6b9;
 }
 
 html {
@@ -52,6 +54,14 @@ body.nav-open {
 
 .bg-accent-senary {
   background: var(--accent-senary);
+}
+
+.bg-accent-octonary {
+  background: var(--accent-octonary);
+}
+
+.bg-accent-nonary {
+  background: var(--accent-nonary);
 }
 
 .bg-black {
