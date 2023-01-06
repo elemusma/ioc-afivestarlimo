@@ -76,7 +76,10 @@ if($layout == 'Content + Image'){
     if(have_rows('repeated_content')): while(have_rows('repeated_content')): the_row();
 
     if(have_rows('sections')):
-    echo '<section class="pt-5 content-area" style="background:url(//cdn.shopify.com/s/files/1/0280/8004/6214/t/5/assets/image-nav-background.jpg?v=99484492238036325261659978185);">';
+    echo '<section class="pt-5 content-area position-relative" style="">';
+
+
+        echo wp_get_attachment_image(69,'full','',['class'=>'w-100 h-100 position-absolute','style'=>'top:0;left:0;object-fit:cover;']);
         echo '<div class="container-fluid">';
 
         while(have_rows('sections')): the_row();
