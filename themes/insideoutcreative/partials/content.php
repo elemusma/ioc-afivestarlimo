@@ -10,10 +10,10 @@ if($layout == 'Content + Image'){
         $content = get_sub_field('content');
         $img = get_sub_field('image');
         if($bgImg){
-            echo '<section class="position-relative content-section bg-accent-secondary text-accent-quinary ' . $classes . '" style="background:url(' . wp_get_attachment_image_url($bgImg['id'],'full') . ');background-size:cover;padding:150px 0;' . $style . '">';
+            echo '<section class="position-relative content-section bg-accent-secondary text-accent-quinary ' . $classes . '" style="background:url(' . wp_get_attachment_image_url($bgImg['id'],'full') . ');background-size:cover;padding:150px 0;' . $style . '" id="' . get_sub_field('id') . '">';
             // echo '</section>';
         } else {
-            echo '<section class="position-relative content-section bg-accent-secondary text-accent-quinary ' . $classes . '" style="padding:150px 0;' . $style . '">';
+            echo '<section class="position-relative content-section bg-accent-secondary text-accent-quinary ' . $classes . '" style="padding:150px 0;' . $style . '" id="' . get_sub_field('id') . '">';
         }
 
         echo '<div class="container">';
@@ -53,12 +53,13 @@ if($layout == 'Content + Image'){
     if(have_rows('columns')): while(have_rows('columns')): the_row();
     echo '<div class="col-lg-3 col-md-6 text-center pt-lg-0 pb-lg-0 position-relative" style="padding-top:100px;padding-bottom:100px;">';
     echo '<span class="position-absolute h1 mb-0 text-columns-big-title" style="
-    opacity: .25;
+    opacity: .5;
     top: -50%;
     left: 50%;
     transform: translate(-60%,-50%);
     font-size: 180px;
-    color:#4e483a;">' . get_sub_field('big_title') . '</span>';
+    color:#a49c86;
+    mix-blend-mode:multiply;">' . get_sub_field('big_title') . '</span>';
 
     echo '<span class="" style="color:var(--accent-septenary);letter-spacing:0.5em;">' . get_sub_field('small_title') . '</span>';
 
@@ -299,8 +300,8 @@ endif;
             while(have_rows('icons_inner')): the_row();
             $icon = get_sub_field('icon');
             echo '<div class="col-lg-4 col-6 text-center mb-5">';
-            echo '<div class="border-hover d-flex align-items-center justify-content-center ml-auto mr-auto mb-4" style="border-radius:50%;height:75px;width:75px;border:1px solid var(--accent-quinary);">';
-            echo wp_get_attachment_image($icon['id'],'full','',['class'=>'','style'=>'height:40px;width:40px;object-fit:contain;']);
+            echo '<div class="border-hover d-flex align-items-center justify-content-center ml-auto mr-auto mb-4" style="border-radius:50%;height:105px;width:105px;border:1px solid var(--accent-quinary);">';
+            echo wp_get_attachment_image($icon['id'],'full','',['class'=>'','style'=>'height:70px;width:70px;object-fit:contain;']);
             echo '</div>';
                 
                 echo '<h3 class="h6 light">' . get_sub_field('title') . '</h3>';

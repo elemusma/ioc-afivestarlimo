@@ -26,28 +26,28 @@ echo '<header class="position-fixed pt-3 pb-3 w-100" style="top:0;left:0;transit
 echo '<div class="position-absolute w-100 bg-accent-quinary header-background" style="top:0;left:0;transition:all .5s ease-in-out;"></div>';
 
 echo '<div class="nav">';
-echo '<div class="container">';
-echo '<div class="row align-items-center">';
+echo '<div class="container-fluid">';
+echo '<div class="row align-items-center justify-content-center">';
 
-echo '<div class="col-lg-5 col-md-6 mobile-hidden">';
+echo '<div class="col-lg-4 col-md-6 mobile-hidden">';
 wp_nav_menu(array(
     'menu' => 'Primary Left',
     'menu_class'=>'menu d-flex flex-wrap list-unstyled justify-content-center align-items-center text-white mb-0'
     )); 
 echo '</div>';
 
-echo '<div class="col-lg-2 col-md-3 col-4 text-center">';
+echo '<div class="col-lg-4 col-md-3 col-4 text-center">';
 echo '<a href="' . home_url() . '">';
 
 $logo = get_field('logo','options'); 
 if($logo){
-    echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 nav-logo','style'=>'max-width:125px;transition:all 1s ease-in-out;height:125px;object-fit:contain;']); 
+    echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 nav-logo','style'=>'transition:all 1s ease-in-out;height:125px;object-fit:contain;']); 
 }
 
 echo '</a>';
 echo '</div>';
 
-echo '<div class="col-lg-5 col-md-6 mobile-hidden">';
+echo '<div class="col-lg-4 col-md-6 mobile-hidden">';
 wp_nav_menu(array(
     'menu' => 'Primary Right',
     'menu_class'=>'menu d-flex flex-wrap list-unstyled justify-content-center align-items-center text-white mb-0'

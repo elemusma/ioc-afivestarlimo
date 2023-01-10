@@ -46,8 +46,15 @@ input.gform_button.button:hover {
   color: var(--accent-primary);
 }
 
-input:focus-visible {
+input:focus-visible,
+textarea:focus-visible {
   outline-color: var(--accent-secondary);
+}
+
+input::placeholder,
+textarea::placeholder {
+  /* color: red; */
+  font-weight: 900;
 }
 
 footer input {
