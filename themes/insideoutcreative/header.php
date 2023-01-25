@@ -174,14 +174,8 @@ if( $smallGallery ):
     echo '</div>';
 endif;
 
-
-echo '</section>';
-endwhile; endif; // end of header_gallery
-
 echo '<div class="pt-5 pb-5 text-white text-lg-center position-relative" style="z-index:5;">';
-// echo '<div class="position-relative">';
-// echo '<div class="multiply overlay position-absolute w-100 h-100 bg-img"></div>';
-// echo '<div class="position-relative">';
+
 echo '<div class="container">';
 echo '<div class="row">';
 echo '<div class="col-12">';
@@ -195,9 +189,13 @@ endif;
 echo '</div>';
 echo '</div>';
 echo '</div>';
-// echo '</div>';
-// echo '</div>';
+
 echo '</div>';
+
+echo '</section>';
+endwhile; endif; // end of header_gallery
+
+
 }
 
 
