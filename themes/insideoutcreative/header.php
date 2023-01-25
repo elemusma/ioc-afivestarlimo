@@ -107,11 +107,10 @@ echo '</div>';
 
 echo '</header>';
 
-echo '<section class="hero position-relative d-flex align-items-center justify-content-center overflow-h" style="height:100vh;">';
 
-if(!is_front_page() && is_page()){
-    the_post_thumbnail('full', array('class' => 'w-100 h-100 bg-img position-absolute'));
-}
+// if(!is_front_page() && is_page()){
+//     the_post_thumbnail('full', array('class' => 'w-100 h-100 bg-img position-absolute'));
+// }
 
 if(is_front_page()) {
 
@@ -127,6 +126,7 @@ if(is_front_page()) {
 // }
 
 if(have_rows('header_gallery')): while(have_rows('header_gallery')): the_row();
+echo '<section class="hero position-relative d-flex align-items-center justify-content-center overflow-h" style="height:100vh;">';
 
 $gallery = get_sub_field('big_gallery');
 
@@ -174,7 +174,9 @@ if( $smallGallery ):
     echo '</div>';
 endif;
 
-endwhile; endif;
+
+echo '</section>';
+endwhile; endif; // end of header_gallery
 
 echo '<div class="pt-5 pb-5 text-white text-lg-center position-relative" style="z-index:5;">';
 // echo '<div class="position-relative">';
@@ -201,6 +203,7 @@ echo '</div>';
 
 
 if(!is_front_page()) {
+echo '<section class="hero position-relative d-flex align-items-center justify-content-center overflow-h" style="">';
 echo '<div class="container pt-5 pb-5 text-center">';
 echo '<div class="row">';
 echo '<div class="col-md-12">';
