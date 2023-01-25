@@ -3,6 +3,9 @@
     .error404 section.hero {
     display: none;
 }
+header {
+    background: var(--accent-quinary);
+}
 </style>
 <?php
 $globalImg = get_field('global_placeholder_image','options');
