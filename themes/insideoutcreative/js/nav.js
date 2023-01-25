@@ -16,13 +16,13 @@ function parallaxEffect() {
     // header.classList.add('position-fixed');
     // header.classList.remove('position-relative');
 
-    if (window.scrollY < (hero.offsetHeight - ((hero.offsetHeight / 2) - 100))) {
+    if (window.scrollY < 300) {
         // header.classList.remove('bg-accent');
         // header.classList.remove('box-shadow');
         navLogo.style.height = "115px";
         headerBg.style.height = `0px`;
     }
-    if (window.scrollY > (hero.offsetHeight - (hero.offsetHeight / 2))) {
+    if (window.scrollY > 300) {
         // header.classList.add('bg-accent');
         // header.classList.add('box-shadow');
         navLogo.style.height = "75px";
