@@ -202,14 +202,13 @@ echo '</div>';
 
 
 
-if(!is_front_page()) {
+if(!is_front_page() && !is_page()) {
 echo '<section class="hero position-relative d-flex align-items-center justify-content-center overflow-h" style="">';
 echo '<div class="container pt-5 pb-5 text-center">';
 echo '<div class="row">';
 echo '<div class="col-md-12">';
-if(is_page() || !is_front_page()){
-echo '<h1 class="">' . get_the_title() . '</h1>';
-} elseif(is_single()){
+
+if(is_single()){
 echo '<h1 class="">' . get_single_post_title() . '</h1>';
 } elseif(is_author()){
 echo '<h1 class="">Author: ' . get_the_author() . '</h1>';
