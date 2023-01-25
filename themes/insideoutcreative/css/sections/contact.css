@@ -15,20 +15,20 @@ input.gform_button.button {
   font-weight: 700;
 }
 
-.gform_wrapper.gravity-theme .gfield_label,
-.gform-body label {
+footer .gform_wrapper.gravity-theme .gfield_label,
+footer .gform-body label {
   color: white;
   margin-bottom: 0 !important;
   line-height: 1;
   margin-right: 11px;
 }
 
-.gform_wrapper.gravity-theme .gfield {
+footer .gform_wrapper.gravity-theme .gfield {
   display: flex;
   align-items: end;
 }
 
-.gform_footer.top_label {
+footer .gform_footer.top_label {
   display: inline-block !important;
   border: 1px solid #252525;
   margin-top: 20px !important;
