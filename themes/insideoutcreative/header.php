@@ -109,6 +109,10 @@ echo '</header>';
 
 echo '<section class="hero position-relative d-flex align-items-center justify-content-center overflow-h" style="height:100vh;">';
 
+if(!is_front_page() && is_page()){
+    the_post_thumbnail('full', array('class' => 'w-100 h-100 bg-img position-absolute'));
+}
+
 if(is_front_page()) {
 
 // $globalPlaceholderImg = get_field('global_placeholder_image','options');
