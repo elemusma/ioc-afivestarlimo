@@ -19,13 +19,13 @@ function parallaxEffect() {
     if (window.scrollY < 100) {
         // header.classList.remove('bg-accent');
         // header.classList.remove('box-shadow');
-        navLogo.style.height = "115px";
+        navLogo.style.width = "225px";
         headerBg.style.height = `0px`;
     }
     if (window.scrollY > 100) {
         // header.classList.add('bg-accent');
         // header.classList.add('box-shadow');
-        navLogo.style.height = "75px";
+        navLogo.style.width = "115px";
         headerBg.style.height = `${header.offsetHeight}px`;
         // headerBg.style.height = `115px`;
         // headerBg.classList.add('box-shadow');

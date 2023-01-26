@@ -21,7 +21,7 @@ wp_head();
 <?php
 if(get_field('body','options')) { the_field('body','options'); }
 // echo '<div class="blank-space"></div>';
-echo '<header class="position-fixed pt-3 pb-3 w-100" style="top:0;left:0;transition:all .25s ease-in-out;z-index:6;">';
+echo '<header class="position-fixed w-100 pt-md-3 pt-2 pb-3" style="top:0;left:0;transition:all .25s ease-in-out;z-index:6;">';
 
 echo '<div class="position-absolute w-100 bg-accent-quinary header-background" style="top:0;left:0;transition:all .5s ease-in-out;"></div>';
 
@@ -36,12 +36,12 @@ wp_nav_menu(array(
     )); 
 echo '</div>';
 
-echo '<div class="col-lg-4 col-md-3 col-4 text-center">';
+echo '<div class="col-lg-4 col-md-3 col-6 text-center">';
 echo '<a href="' . home_url() . '">';
 
 $logo = get_field('logo','options'); 
 if($logo){
-    echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 nav-logo','style'=>'transition:all 1s ease-in-out;height:125px;object-fit:contain;']); 
+    echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'h-100 nav-logo','style'=>'transition:all 1s ease-in-out;width:225px;object-fit:contain;max-width:100%;']); 
 }
 
 echo '</a>';
@@ -61,7 +61,7 @@ echo '</div>';
 //     )); 
 // echo '</div>';
 
-echo '<div class="col-lg-10 col-md-9 col-8 desktop-hidden">';
+echo '<div class="col-lg-10 col-md-9 col-6 desktop-hidden">';
 echo '<a id="navToggle" class="nav-toggle">';
 echo '<div>';
 echo '<div class="line-1 bg-white"></div>';
