@@ -181,10 +181,12 @@ echo '<div class="row">';
 echo '<div class="col-12">';
 echo '<h1 class="pt-3 pb-3 mb-0 text-shadow" style="font-size:5vw;">' . get_the_title() . '</h1>';
 
+echo '<div class="col-md-12 col-9 pl-0">';
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 the_content();
 endwhile;
 endif;
+echo '</div>';
 
 echo '</div>';
 echo '</div>';
