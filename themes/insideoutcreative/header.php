@@ -198,6 +198,20 @@ echo '</section>';
 endwhile; endif; // end of header_gallery
 
 
+} elseif (is_page()){
+    echo '<section class="d-flex align-items-center justify-content-center position-relative" style="min-height:100vh;padding:100px 0;">';
+
+    if(has_post_thumbnail()){
+        the_post_thumbnail('full',array(
+            'class'=>'w-100 h-100 position-absolute',
+            'style'=>'top:0;left:0;object-fit:cover;'
+        ));
+    }
+        echo '<div class="position-relative">';
+        echo '<h1 class="text-white text-shadow" style="font-size:4vw;">' . get_the_title() . '</h1>';
+        echo '</div>';
+
+    echo '</section>';
 }
 
 

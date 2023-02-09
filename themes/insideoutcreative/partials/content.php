@@ -527,7 +527,7 @@ echo '<div class="h3 position-relative">';
 echo '<div class="row align-items-baseline">';
 echo '<div class="col-6">';
 echo '<div class="big-titles">';
-echo '<span class="about-text regular text-uppercase">' . $title . '</span>';
+echo '<span class="about-text regular text-uppercase text-white">' . $title . '</span>';
 echo '<span class="us-text text-uppercase">' . $subtitle . '</span>';
 echo '</div>';
 echo '</div>';
@@ -540,7 +540,7 @@ echo '</div>';
 echo '</div>';
 echo '</div>';
 
-echo '<div class="paragraph-text">';
+echo '<div class="paragraph-text" style="color:#e1e1e1;">';
 echo $content;
 echo '</div>';
 echo '</div>';
