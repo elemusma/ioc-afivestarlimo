@@ -350,11 +350,142 @@ endif;
         echo '</div>';
         echo '</section>';
     endwhile; endif;
+} elseif($layout == 'Gallery'){
+
+    if(have_rows('gallery_group')): while(have_rows('gallery_group')): the_row();
+    echo '<section class="position-relative bg-accent-quinary ' . get_sub_field('classes') . '" style="padding-top:150px;padding-bottom:150px;' . get_sub_field('style') . '" id="' . get_sub_field('id') . '">';
+    
+        $bgImg = get_sub_field('background_image');
+    
+        if($bgImg){
+            echo wp_get_attachment_image($bgImg['id'],'full','',[
+                'class'=>'w-100 h-100 position-absolute',
+                'style'=>'top:0;left:0;object-fit:cover;'
+            ]);
+        }
+
+        echo '<div class="container">';
+            echo '<div class="row">';
+                echo '<div class="col-12 text-center pb-5">';
+                echo get_sub_field('content');
+                echo '</div>';
+            echo '</div>';
+
+            $gallery = get_sub_field('gallery');
+            if( $gallery ): 
+                echo '<div class="row align-items-center">';
+                foreach( $gallery as $image ):
+                    echo '<div class="col-lg-3 col-md-4 col-6 mt-3 mb-3 overflow-h">';
+                    // echo '<div class="position-relative">';
+                    // echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set" data-title="' . $image['title'] . '">';
+                    echo wp_get_attachment_image($image['id'], 'full','',[
+                        'class'=>'w-100 img-portfolio',
+                        'style'=>'mix-blend-mode:darken;object-fit:contain;',
+                    ] );
+                    // echo '</a>';
+                    // echo '</div>';
+                    echo '</div>';
+                endforeach; 
+                echo '</div>';
+            endif;
+
+        echo '</div>';
+
+    echo '</section>';
+
+    endwhile; endif;
+
+} elseif($layout == 'Carousel'){
+    if(have_rows('carousel_group')): while(have_rows('carousel_group')): the_row();
+    echo '<section class="position-relative bg-accent-quinary ' . get_sub_field('classes') . '" style="padding-top:100px;padding-bottom:100px;' . get_sub_field('style') . '" id="' . get_sub_field('id') . '">';
+
+    echo wp_get_attachment_image(69,'full','',[
+        'class'=>'w-100 h-100 position-absolute',
+        'style'=>'top:0;left:0;object-fit:cover;'
+    ]);
+    
+        $bgImg = get_sub_field('background_image');
+    
+        if($bgImg){
+            echo wp_get_attachment_image($bgImg['id'],'full','',[
+                'class'=>'w-100 h-100 position-absolute',
+                'style'=>'top:0;left:0;object-fit:cover;'
+            ]);
+        }
+
+        echo '<div class="container">';
+            echo '<div class="row">';
+                echo '<div class="col-12 text-center pb-5">';
+                echo get_sub_field('content');
+                echo '</div>';
+            echo '</div>';
+            echo '</div>';
+
+            $gallery = get_sub_field('gallery');
+            if( $gallery ): 
+                // echo '<div class="gallery-carousel-group">';
+                echo '<div class="carousel owl-carousel owl-theme arrows-middle">';
+                foreach( $gallery as $image ):
+                    echo '<div class="overflow-h">';
+                    echo '<div class="img-hover overflow-h">';
+                    echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set" data-title="' . $image['title'] . '">';
+                    echo wp_get_attachment_image($image['id'], 'full','',[
+                        'class'=>'w-100',
+                        'style'=>'height:300px;object-fit:cover;',
+                        ] );
+                        echo '</a>';
+                        echo '</div>';
+                        echo '</div>';
+                    endforeach; 
+                    echo '</div>';
+                    // echo '</div>';
+            endif;
+            
+
+    echo '</section>';
+    endwhile; endif;
+
+} elseif($layout == 'Big Image'){
+    if(have_rows('big_image_group')): while(have_rows('big_image_group')): the_row();
+    echo '<section class="position-relative bg-accent-quinary ' . get_sub_field('classes') . '" style="' . get_sub_field('style') . '" id="' . get_sub_field('id') . '">';
+    
+        $bgImg = get_sub_field('background_image');
+    
+        if($bgImg){
+            echo wp_get_attachment_image($bgImg['id'],'full','',[
+                'class'=>'w-100 h-100 position-absolute',
+                'style'=>'top:0;left:0;object-fit:cover;'
+            ]);
+        }
+
+        $image = get_sub_field('big_image');
+        echo wp_get_attachment_image($image['id'],'full','',[
+            'class'=>'w-100 h-auto',
+            'style'=>''
+        ]);
+
+        echo '</section>';
+    endwhile; endif;
+
 } elseif($layout == 'Testimonials'){
     if(have_rows('testimonials')): while(have_rows('testimonials')): the_row();
-    echo '<section class="position-relative bg-accent-quinary" style="padding:150px 0;">';
+    // echo '<section class="position-relative bg-accent-quinary" style="padding:150px 0;">';
+    // echo '</section>';
 
-    echo wp_get_attachment_image(173,'full','',['class'=>'w-100 position-absolute','style'=>'height:80%;top:10%;left:0;mix-blend-mode:multiply;']);
+    echo '<section class="position-relative bg-accent-quinary testimonials-section ' . get_sub_field('classes') . '" style="padding-top:150px;padding-bottom:150px;' . get_sub_field('style') . '" id="' . get_sub_field('id') . '">';
+
+        // echo '<img src="https://insideoutcreative.io/wp-content/uploads/2023/02/Old-Paper-Background.jpg" class="w-100 h-100 position-absolute" style="top:0;left:0;object-fit:cover;" alt="">';
+        echo wp_get_attachment_image(173,'full','',['class'=>'w-100 position-absolute','style'=>'height:80%;top:10%;left:0;mix-blend-mode:multiply;']);
+    
+        $bgImg = get_sub_field('background_image');
+    
+        if($bgImg){
+            echo wp_get_attachment_image($bgImg['id'],'full','',[
+                'class'=>'w-100 h-100 position-absolute',
+                'style'=>'top:0;left:0;object-fit:cover;'
+            ]);
+        }
+
     
     echo '<div class="container">';
     echo '<div class="row">';
@@ -378,7 +509,9 @@ endif;
                 echo '</div>';
 
                 $headshot = get_sub_field('headshot');
-                echo wp_get_attachment_image($headshot['id'],'full','',['class'=>'ml-auto mr-auto','style'=>'width:100px;height:100px;object-fit:cover;border-radius:50%;']);
+                if($headshot){
+                    echo wp_get_attachment_image($headshot['id'],'full','',['class'=>'ml-auto mr-auto','style'=>'width:100px;height:100px;object-fit:cover;border-radius:50%;']);
+                }
 
                 echo '<span class="d-block h5 cormorant pt-4">' . get_sub_field('name') . '</span>';
                 echo '<span class="d-block text-white">' . get_sub_field('title') . '</span>';
@@ -395,10 +528,21 @@ endif;
     endwhile; endif;
 } elseif($layout == 'Contact'){
     if(have_rows('contact')): while(have_rows('contact')): the_row();
-        echo '<section class="position-relative bg-accent-quinary" style="padding-top:500px;padding-bottom:100px;">';
+        // echo '<section class="position-relative bg-accent-quinary" style="padding-top:500px;padding-bottom:100px;">';
+        // echo '</section>';
 
+        echo '<section class="position-relative bg-accent-quinary contact-section ' . get_sub_field('classes') . '" style="padding-top:500px;padding-bottom:50px;' . get_sub_field('style') . '" id="' . get_sub_field('id') . '">';
+
+        // echo '<img src="https://insideoutcreative.io/wp-content/uploads/2023/02/Old-Paper-Background.jpg" class="w-100 h-100 position-absolute" style="top:0;left:0;object-fit:cover;" alt="">';
+    
         $bgImg = get_sub_field('background_image');
-        echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'position-absolute w-100','style'=>'height:80%;top:0;left:0;object-fit:cover;']);
+    
+        if($bgImg){
+            echo wp_get_attachment_image($bgImg['id'],'full','',[
+                'class'=>'w-100 h-100 position-absolute',
+                'style'=>'top:0;left:0;object-fit:cover;'
+            ]);
+        }
 
         echo '<div class="container">';
         echo '<div class="row justify-content-center">';
