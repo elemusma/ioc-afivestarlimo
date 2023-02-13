@@ -7,8 +7,8 @@ get_header(); ?>
     .hero-content,.hero-img{
     display: none;
 }
-section.hero {
-    display: none;
+section.hero-section {
+    display: none!important;
 }
 </style>
 <section class="pb-5 position-relative" style="overflow:hidden;padding-top:200px;">

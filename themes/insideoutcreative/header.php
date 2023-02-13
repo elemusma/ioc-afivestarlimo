@@ -199,7 +199,7 @@ endwhile; endif; // end of header_gallery
 
 
 } elseif (is_page()){
-    echo '<section class="d-flex align-items-center justify-content-center position-relative" style="min-height:100vh;padding:100px 0;">';
+    echo '<section class="d-flex align-items-center justify-content-center position-relative hero-section" style="min-height:100vh;padding:100px 0;">';
 
     if(has_post_thumbnail()){
         the_post_thumbnail('full',array(
