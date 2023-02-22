@@ -404,6 +404,8 @@ echo '</div>';
 
         // echo '<img src="https://insideoutcreative.io/wp-content/uploads/2023/02/Old-Paper-Background.jpg" class="w-100 h-100 position-absolute" style="top:0;left:0;object-fit:cover;" alt="">';
         echo wp_get_attachment_image(173,'full','',['class'=>'w-100 position-absolute','style'=>'height:80%;top:10%;left:0;mix-blend-mode:multiply;']);
+
+        echo '<img src="https://insideoutcreative.io/wp-content/uploads/2023/02/Confetti-Bg.png" height="100%" width="100%" class="position-absolute" style="top:0;left:0;" alt="">';
     
         $bgImg = get_sub_field('background_image');
     
