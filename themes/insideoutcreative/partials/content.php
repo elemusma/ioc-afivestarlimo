@@ -307,7 +307,7 @@ echo '</div>';
                     // echo '<div class="position-relative">';
                     // echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set" data-title="' . $image['title'] . '">';
                     echo wp_get_attachment_image($image['id'], 'full','',[
-                        'class'=>'w-100 img-portfolio',
+                        'class'=>'w-100 h-100 img-gallery',
                         'style'=>'mix-blend-mode:darken;object-fit:contain;',
                     ] );
                     // echo '</a>';
