@@ -17,7 +17,16 @@ section.hero-section {
 } else { 
     $globalPlaceholderImg = get_field('global_placeholder_image','options');
     echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'bg-img position-absolute w-100 h-100']);
-} ?>
+} 
+
+echo '<div class="position-absolute w-100 h-100" style="
+    top:0;
+    left:0;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.5) 75%, rgba(0,0,0,1) 100%);
+    "></div>';
+
+?>
     <div class="container pb-4">
         <div class="row justify-content-center">
             <div class="col-md-9 pt-5 pb-5 p-4">

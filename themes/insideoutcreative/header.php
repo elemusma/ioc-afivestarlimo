@@ -212,7 +212,7 @@ endwhile; endif; // end of header_gallery
     top:0;
     left:0;
     background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.2539609593837535) 50%, rgba(0,0,0,0.5004595588235294) 75%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.5) 75%, rgba(0,0,0,1) 100%);
     "></div>';
 
         echo '<div class="position-relative">';
