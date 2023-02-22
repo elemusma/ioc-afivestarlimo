@@ -281,7 +281,7 @@ echo '</div>';
 } elseif($layout == 'Gallery'){
 
     if(have_rows('gallery_group')): while(have_rows('gallery_group')): the_row();
-    echo '<section class="position-relative bg-accent-quinary ' . get_sub_field('classes') . '" style="padding-top:150px;padding-bottom:150px;' . get_sub_field('style') . '" id="' . get_sub_field('id') . '">';
+    echo '<section class="position-relative ' . get_sub_field('classes') . '" style="padding-top:150px;padding-bottom:150px;' . get_sub_field('style') . '" id="' . get_sub_field('id') . '">';
     
         $bgImg = get_sub_field('background_image');
     
@@ -343,7 +343,7 @@ echo '</div>';
 
         echo '<div class="container">';
             echo '<div class="row">';
-                echo '<div class="col-12 text-center pb-5">';
+                echo '<div class="col-12 text-center text-white pb-5">';
                 echo get_sub_field('content');
                 echo '</div>';
             echo '</div>';
