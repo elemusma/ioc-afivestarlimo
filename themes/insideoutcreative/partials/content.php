@@ -138,7 +138,7 @@ if($layout == 'Content + Image'){
             echo '<div class="col-md-11 mt-2 smaller-text">';
             // echo '</div>';
         }
-        echo '<div class="bg-top" style="pointer-events:none;"></div>';
+        echo '<div class="bg-top ss" style="pointer-events:none;"></div>';
         echo '<div class="featured-text">';
 
         echo get_sub_field('content');
