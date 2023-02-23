@@ -111,10 +111,10 @@ if($layout == 'Content + Image'){
 
         if($imageSide == 'Left'){
         echo '<div class="bg-top" style="clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
-        "></div>';
+        pointer-events:none;"></div>';
         } else {
         echo '<div class="bg-top" style="clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
-        "></div>';
+        pointer-events:none;"></div>';
         }
 
         echo '<div class="text-center position-relative z-1">';
